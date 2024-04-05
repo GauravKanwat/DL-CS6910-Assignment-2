@@ -1,0 +1,29 @@
+Train:  250
+Val:  63
+Test:  63
+Device:  mps
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=GoogLeNet_Weights.IMAGENET1K_V1`. You can also use `weights=GoogLeNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Epoch [1/10], Accuracy: 57.15%, Loss: 1.4402
+Epoch [1/10], Validation Accuracy: 67.93%, Validation Loss: 1.0687
+Epoch [2/10], Accuracy: 67.80%, Loss: 1.0293
+Epoch [2/10], Validation Accuracy: 70.24%, Validation Loss: 0.9440
+Epoch [3/10], Accuracy: 69.51%, Loss: 0.9467
+Epoch [3/10], Validation Accuracy: 70.54%, Validation Loss: 0.9229
+Epoch [4/10], Accuracy: 70.08%, Loss: 0.9186
+Epoch [4/10], Validation Accuracy: 70.69%, Validation Loss: 0.8975
+Epoch [5/10], Accuracy: 70.39%, Loss: 0.9088
+Epoch [5/10], Validation Accuracy: 71.19%, Validation Loss: 0.9079
+Epoch [6/10], Accuracy: 71.24%, Loss: 0.8753
+Epoch [6/10], Validation Accuracy: 70.59%, Validation Loss: 0.9046
+Epoch [7/10], Accuracy: 71.17%, Loss: 0.8652
+Epoch [7/10], Validation Accuracy: 72.09%, Validation Loss: 0.8645
+Epoch [8/10], Accuracy: 72.15%, Loss: 0.8470
+Epoch [8/10], Validation Accuracy: 72.89%, Validation Loss: 0.8685
+Epoch [9/10], Accuracy: 71.84%, Loss: 0.8539
+Epoch [9/10], Validation Accuracy: 72.09%, Validation Loss: 0.8690
+Epoch [10/10], Accuracy: 72.84%, Loss: 0.8271
+Epoch [10/10], Validation Accuracy: 71.79%, Validation Loss: 0.8704
+Test Accuracy: 72.55%, Test Loss: 0.8238

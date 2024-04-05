@@ -1,0 +1,13 @@
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=GoogLeNet_Weights.IMAGENET1K_V1`. You can also use `weights=GoogLeNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_64763/3432973192.py", line 63, in train
+    param.requires_grad = False
+    ^^^^^
+NameError: name 'param' is not defined. Did you mean: 'params'?
+Train:  563
+Val:  63
+Test:  63
+Device:  mps
