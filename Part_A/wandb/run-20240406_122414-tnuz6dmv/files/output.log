@@ -1,0 +1,57 @@
+Train:  563
+Val:  63
+Test:  63
+Device:  mps
+filter size:  [5, 5, 5, 5, 5]
+fc1_input:  2048
+Epoch [1/10], Accuracy: 22.90%, Loss: 2.1240
+Epoch [1/10], Validation Accuracy: 27.66%, Validation Loss: 1.9986
+Epoch [2/10], Accuracy: 29.78%, Loss: 1.9769
+Epoch [2/10], Validation Accuracy: 31.02%, Validation Loss: 1.8997
+Epoch [3/10], Accuracy: 33.21%, Loss: 1.8930
+Epoch [3/10], Validation Accuracy: 33.82%, Validation Loss: 1.8520
+Epoch [4/10], Accuracy: 35.79%, Loss: 1.8165
+Epoch [4/10], Validation Accuracy: 37.72%, Validation Loss: 1.7513
+Epoch [5/10], Accuracy: 40.50%, Loss: 1.7083
+Epoch [5/10], Validation Accuracy: 40.32%, Validation Loss: 1.6908
+Epoch [6/10], Accuracy: 45.54%, Loss: 1.5730
+Epoch [6/10], Validation Accuracy: 43.57%, Validation Loss: 1.6048
+Epoch [7/10], Accuracy: 50.94%, Loss: 1.4347
+Epoch [7/10], Validation Accuracy: 45.12%, Validation Loss: 1.5758
+Epoch [8/10], Accuracy: 55.30%, Loss: 1.3023
+Epoch [8/10], Validation Accuracy: 48.47%, Validation Loss: 1.4526
+Epoch [9/10], Accuracy: 61.02%, Loss: 1.1608
+Epoch [9/10], Validation Accuracy: 50.48%, Validation Loss: 1.4126
+Epoch [10/10], Accuracy: 65.13%, Loss: 1.0582
+Epoch [10/10], Validation Accuracy: 53.68%, Validation Loss: 1.3460
+Test Accuracy: 39.90%, Test Loss: 1.9037
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).
+Clipping input data to the valid range for imshow with RGB data ([0..1] for floats or [0..255] for integers).

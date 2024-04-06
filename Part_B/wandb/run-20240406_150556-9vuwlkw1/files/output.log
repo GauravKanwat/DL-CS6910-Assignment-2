@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_41321/2712289459.py", line 20, in train
+    train_loader, val_loader, test_loader, class_names = data_generation(dataset_path,
+                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_41321/2065000170.py", line 34, in data_generation
+    train_dataset = datasets.ImageFolder(root = dataset_path + "train", transform=train_transform)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 309, in __init__
+    super().__init__(
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 144, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 218, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 40, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/input/inaturalist-12k/inaturalist_12K/train'

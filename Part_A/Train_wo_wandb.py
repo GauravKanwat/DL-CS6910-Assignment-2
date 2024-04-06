@@ -13,7 +13,7 @@ import pathlib
 import sys
 sys.path.append('CNN')
 
-from ClassCNN import ClassCNN, trainCNN, testCNN
+from ClassCNN import ClassCNN, trainCNN
 
 def get_mean_and_std(train_loader):
     mean = 0
@@ -44,32 +44,30 @@ def show_images(class_names, images, labels):
 
 
 
-def show_images_and_labels(model, test_loader, class_names):
+def show_images_and_labels(device, model, test_loader, class_names):
     model.eval()
     with torch.no_grad():  # Disable gradient tracking
-        fig, axes = plt.subplots(10, 3, figsize=(15, 30))  # Create a 10x3 grid of subplots
+        images_per_class = {class_name: 0 for class_name in class_names}
+        fig, axes = plt.subplots(10, 3, figsize=(15, 30))  # 10x3 grid
         
-        for i, (images, labels) in enumerate(test_loader):            
-            # Get predictions from the model
+        for images, labels in test_loader:
+            images, labels = images.to(device), labels.to(device)
             outputs = model(images)
             _, predicted = torch.max(outputs, 1)
             
-            # Convert labels and predictions to class names
-            predicted_classes = [class_names[p] for p in predicted]
-            original_classes = [class_names[l] for l in labels]
+            for image, label, pred in zip(images, labels, predicted):
+                class_name = class_names[label.item()]
+                if images_per_class[class_name] < 3:
+                    ax = axes[label.item(), images_per_class[class_name]]
+                    img = image.permute(1, 2, 0).cpu().numpy()
+                    ax.imshow(img)
+                    ax.set_title(f"Predicted: {class_names[pred.item()]}\nOriginal: {class_name}")
+                    ax.axis('off')
+                    images_per_class[class_name] += 1
             
-            # Display images with labels
-            for j in range(len(images)):
-                ax = axes[i, j]  # Select the appropriate subplot
-                # Convert from tensor format to image format
-                ax.imshow(images[j].permute(1, 2, 0))
-                ax.set_title(f"Predicted: {predicted_classes[j]}\nOriginal: {original_classes[j]}")
-                ax.axis('off')
-                
-            # After printing images from each class, break the loop
-            if i == 9:
+            if all(count == 3 for count in images_per_class.values()):
                 break
-        
+                
         # Prevent overlap
         plt.tight_layout()
         plt.show()
@@ -102,8 +100,8 @@ def data_generation(dataset_path, num_classes=10, data_augmentation=False, batch
     
     test_transform = transforms.Compose([
         transforms.Resize((256, 256)),
-        transforms.ToTensor()
-        # transforms.Normalize(torch.Tensor(mean), torch.Tensor(std))
+        transforms.ToTensor(),
+        transforms.Normalize(torch.Tensor(mean), torch.Tensor(std))
     ])
 
 
@@ -147,13 +145,13 @@ def data_generation(dataset_path, num_classes=10, data_augmentation=False, batch
 
     # Get class names
     classpath = pathlib.Path(dataset_path + "train")
-    class_names = sorted([j.name.split('/')[-1] for j in classpath.iterdir()])
+    class_names = sorted([j.name.split('/')[-1] for j in classpath.iterdir() if j.name != ".DS_Store"])
 
     return train_loader, val_loader, test_loader, class_names
 
 
 def main():    
-    dataset_path = './inaturalist_12K/'        
+    dataset_path = '../inaturalist_12K/'        
 
     data_augmentation = False
     batch_size = 32
@@ -167,14 +165,14 @@ def main():
 
     def train():   
         train_loader, val_loader, test_loader, class_names = data_generation(dataset_path, 
-                                                                                num_classes=10, 
-                                                                                data_augmentation=data_augmentation, 
-                                                                                batch_size=batch_size)
-
+                                                                             num_classes=10, 
+                                                                             data_augmentation=data_augmentation, 
+                                                                             batch_size=batch_size)
+        
         print("Train: ", len(train_loader))
         print("Val: ", len(val_loader))
         print("Test: ", len(test_loader))
-
+        
         # for images, labels in train_loader:
         #     show_images(class_names, images, labels)
         #     break
@@ -182,10 +180,10 @@ def main():
         filter_sizes = []
         for i in range(5):
             filter_sizes.append(filter_size)
-
+        
         device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
         print("Device: ", device)
-
+        
         print("filter size: ", filter_sizes)
         model = ClassCNN(num_filters=num_filters, 
                             activation_function=activation_function, 
@@ -198,12 +196,9 @@ def main():
                             image_size=256)
         model.to(device)
         # trainCNN(device, train_loader, val_loader, model, num_epochs=10, optimizer="Adam")
-        # model = trainCNN(device, train_loader, val_loader, test_loader, model, testing_mode=True, num_epochs=1, optimizer="Adam")
-
-        # test_accuracy, test_loss, model = testCNN(device, test_loader, model)
-        # print(f"Test Accuracy: {test_accuracy * 100:.2f}%, Test Loss: {test_loss:.4f}")
-
-        show_images_and_labels(model, test_loader, class_names)
+        trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=10, optimizer="Adam")
+        
+        show_images_and_labels(device, model, test_loader, class_names)
 
     train()
 

@@ -64,7 +64,7 @@ class ClassCNN(nn.Module):
     return x
   
 
-def trainCNN(device, train_loader, val_loader, test_loader, model, testing_mode=True, num_epochs=10, optimizer="Adam"):    
+def trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=10, optimizer="Adam"):    
     criterion = nn.CrossEntropyLoss()
     if optimizer == "Adam":
         opt_func = optim.Adam(model.parameters(), lr=0.001)
@@ -93,7 +93,7 @@ def trainCNN(device, train_loader, val_loader, test_loader, model, testing_mode=
         loss = running_loss / len(train_loader.dataset)
         accuracy = total_correct / total_samples
         print(f"Epoch [{epoch+1}/{num_epochs}], Accuracy: {accuracy * 100:.2f}%, Loss: {loss:.4f}")
-        # wandb.log({'accuracy': accuracy, 'loss': loss})
+        wandb.log({'accuracy': accuracy, 'loss': loss})
 
         # Validation
         model.eval()
@@ -115,27 +115,25 @@ def trainCNN(device, train_loader, val_loader, test_loader, model, testing_mode=
             val_loss = val_running_loss / len(val_loader.dataset)
             val_accuracy = val_total_correct / val_total_samples
             print(f"Epoch [{epoch+1}/{num_epochs}], Validation Accuracy: {val_accuracy * 100:.2f}%, Validation Loss: {val_loss:.4f}")
-            # wandb.log({'val_accuracy': val_accuracy, 'val_loss': val_loss})
-            return model
-
-
-def testCNN(device, test_loader, model):
-    criterion = nn.CrossEntropyLoss()
-    model.eval()
-    with torch.no_grad():
-        total_correct = 0
-        total_samples = 0
-        test_loss = 0.0
-        for inputs, labels in tqdm(test_loader):
-            inputs, labels = inputs.to(device), labels.to(device)
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-
-            _, predicted = torch.max(outputs, 1)
-            total_correct += (predicted == labels).sum().item()
-            total_samples += labels.size(0)
-
-            test_loss += loss.item() * inputs.size(0)
-        loss = test_loss / len(test_loader.dataset)
-        accuracy = total_correct / total_samples
-        return accuracy, loss, model
+            wandb.log({'val_accuracy': val_accuracy, 'val_loss': val_loss})
+    
+        if epoch==num_epochs-1:
+            model.eval()
+            with torch.no_grad():
+                test_total_correct = 0
+                test_total_samples = 0
+                test_running_loss = 0.0
+                for test_inputs, test_labels in tqdm(test_loader):
+                    test_inputs, test_labels = test_inputs.to(device), test_labels.to(device)
+                    test_outputs = model(test_inputs)
+                    test_loss = criterion(test_outputs, test_labels)
+    
+                    _, test_predicted = torch.max(test_outputs, 1)
+                    test_total_correct += (test_predicted == test_labels).sum().item()
+                    test_total_samples += test_labels.size(0)
+    
+                    test_running_loss += test_loss.item() * test_inputs.size(0)
+    
+                test_loss = test_running_loss / len(test_loader.dataset)
+                test_accuracy = test_total_correct / test_total_samples
+                print(f"Test Accuracy: {test_accuracy * 100:.2f}%, Test Loss: {test_loss:.4f}")

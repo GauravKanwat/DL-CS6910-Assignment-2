@@ -1,0 +1,45 @@
+Train:  250
+Val:  63
+Test:  63
+Device:  mps
+filter size:  [5, 5, 5, 5, 5]
+fc1_input:  2048
+Traceback (most recent call last):
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_80948/2577559447.py", line 90, in train
+    trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=10, optimizer="Adam")
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_80948/742179203.py", line 80, in trainCNN
+    for inputs, labels in tqdm(train_loader):
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/tqdm/notebook.py", line 250, in __iter__
+    for obj in it:
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 631, in __next__
+    data = self._next_data()
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/utils/data/dataloader.py", line 675, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = self.dataset.__getitems__(possibly_batched_index)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/utils/data/dataset.py", line 399, in __getitems__
+    return [self.dataset[self.indices[idx]] for idx in indices]
+            ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 229, in __getitem__
+    sample = self.loader(path)
+             ^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 268, in default_loader
+    return pil_loader(path)
+           ^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/datasets/folder.py", line 248, in pil_loader
+    return img.convert("RGB")
+           ^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/PIL/Image.py", line 922, in convert
+    self.load()
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/PIL/ImageFile.py", line 271, in load
+    s = read(self.decodermaxblock)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/PIL/JpegImagePlugin.py", line 417, in load_read
+    s = self.fp.read(read_bytes)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

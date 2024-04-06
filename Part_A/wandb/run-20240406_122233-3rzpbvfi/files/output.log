@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_21529/1906815815.py", line 89, in train
+    trainCNN(device, train_loader, val_loader, model, num_epochs=10, optimizer="Adam")
+TypeError: trainCNN() missing 1 required positional argument: 'model'
+Train:  563
+Val:  63
+Test:  63
+Device:  mps
+filter size:  [5, 5, 5, 5, 5]
+fc1_input:  2048

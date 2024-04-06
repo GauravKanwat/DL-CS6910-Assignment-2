@@ -16,6 +16,7 @@ wandb.login()
 import sys
 sys.path.append('CNN')
 
+import hyperparameter_config
 from ClassCNN import ClassCNN, trainCNN
 
 def get_mean_and_std(train_loader):
@@ -150,43 +151,45 @@ def data_generation(dataset_path, num_classes=10, data_augmentation=False, batch
     return train_loader, val_loader, test_loader, class_names
 
 
-def main():    
+def main(args):    
     dataset_path = '../inaturalist_12K/' 
 
     sweep_config = {
         'method' : 'bayes',                    #('random', 'grid', 'bayes')
-        'project' : 'CS6910_Assignment_2',
+        'project' : args.wandb_project,
+        'name' : 'Sweep',
+        'entity' : args.wandb_entity,
         'metric' : {                           # Metric to optimize
-            'name' : 'accuracy', 
+            'name' : 'val_accuracy', 
             'goal' : 'maximize'
         },
         'parameters' : {
             'data_augmentation': {
-                'values' : [True, False]
+                'values' : [args.data_augmentation]
             },
             'batch_size': {
-                'values' : [32]
+                'values' : [args.batch_size]
             },
             'batch_norm' : {
-                'values' : [True, False]
+                'values' : [args.batch_norm]
             },
             'dropout' : {
-                'values' : [0.2, 0.3]
+                'values' : [args.dropout]
             },
             'dense_size' : {
-                'values' : [128, 256, 512]
+                'values' : [args.dense_size]
             },
             'num_filters' : {
-                'values' : [4, 8, 16, 32]
+                'values' : [args.num_filters]
             },
             'filter_size' : {
-                'values' : [3, 5, 7]
+                'values' : [args.filter_size]
             },
             'activation_function': {
-                'values' : ['ReLU', 'GELU', 'SiLU', 'Mish']
+                'values' : [args.activation_function]
             },
             'filter_multiplier': {
-                'values' : [1, 0.5, 2]
+                'values' : [args.filter_multiplier]
             }
         }
     }
@@ -234,4 +237,6 @@ def main():
     wandb.finish()
     train()
 
-main()
+if __name__ == "__main__":
+    args = hyperparameter_config.configParse()
+    main(args)

@@ -1,0 +1,653 @@
+2024-04-06 01:51:08,752 INFO    StreamThr :81404 [internal.py:wandb_internal():86] W&B internal server running at pid: 81404, started at: 2024-04-06 01:51:08.751130
+2024-04-06 01:51:08,754 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status
+2024-04-06 01:51:08,756 INFO    WriterThread:81404 [datastore.py:open_for_write():87] open: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/run-ykk4s182.wandb
+2024-04-06 01:51:08,758 DEBUG   SenderThread:81404 [sender.py:send():378] send: header
+2024-04-06 01:51:08,831 DEBUG   SenderThread:81404 [sender.py:send():378] send: run
+2024-04-06 01:51:09,722 INFO    SenderThread:81404 [dir_watcher.py:__init__():211] watching files in: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files
+2024-04-06 01:51:09,722 INFO    SenderThread:81404 [sender.py:_start_run_threads():1099] run started: ykk4s182 with start time 1712348468.748281
+2024-04-06 01:51:09,741 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: check_version
+2024-04-06 01:51:09,742 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: check_version
+2024-04-06 01:51:09,895 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: run_start
+2024-04-06 01:51:09,901 DEBUG   HandlerThread:81404 [system_info.py:__init__():26] System info init
+2024-04-06 01:51:09,901 DEBUG   HandlerThread:81404 [system_info.py:__init__():41] System info init done
+2024-04-06 01:51:09,901 INFO    HandlerThread:81404 [system_monitor.py:start():194] Starting system monitor
+2024-04-06 01:51:09,901 INFO    SystemMonitor:81404 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-04-06 01:51:09,901 INFO    HandlerThread:81404 [system_monitor.py:probe():214] Collecting system info
+2024-04-06 01:51:09,902 INFO    SystemMonitor:81404 [interfaces.py:start():190] Started cpu monitoring
+2024-04-06 01:51:09,903 DEBUG   HandlerThread:81404 [system_info.py:probe():150] Probing system
+2024-04-06 01:51:09,904 INFO    SystemMonitor:81404 [interfaces.py:start():190] Started disk monitoring
+2024-04-06 01:51:09,910 INFO    SystemMonitor:81404 [interfaces.py:start():190] Started gpuapple monitoring
+2024-04-06 01:51:09,912 INFO    SystemMonitor:81404 [interfaces.py:start():190] Started memory monitoring
+2024-04-06 01:51:09,912 INFO    SystemMonitor:81404 [interfaces.py:start():190] Started network monitoring
+2024-04-06 01:51:09,914 DEBUG   HandlerThread:81404 [system_info.py:_probe_git():135] Probing git
+2024-04-06 01:51:09,932 DEBUG   HandlerThread:81404 [system_info.py:_probe_git():143] Probing git done
+2024-04-06 01:51:09,932 DEBUG   HandlerThread:81404 [system_info.py:probe():198] Probing system done
+2024-04-06 01:51:09,932 DEBUG   HandlerThread:81404 [system_monitor.py:probe():223] {'os': 'macOS-14.3.1-arm64-arm-64bit', 'python': '3.12.2', 'heartbeatAt': '2024-04-05T20:21:09.905962', 'startedAt': '2024-04-05T20:21:08.742508', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'CNN_no_sweep.ipynb', 'codePathLocal': 'CNN_no_sweep.ipynb', 'root': '/Users/gaurav/Developer/Projects/CS6910_2', 'git': {'remote': 'git@github.com:GauravKanwat/DL-CS6910-Assignment-2.git', 'commit': '8662c08ee56a43e5cbbdb31b683360cdc8748f71'}, 'email': 'gauravkanwat99@gmail.com', 'host': 'gs5.local', 'username': 'gaurav', 'executable': '/Users/gaurav/miniforge3/envs/CS6910_Assignment/bin/python3.12', 'cpu_count': 8, 'cpu_count_logical': 8, 'cpu_freq': {'current': 3504, 'min': 600, 'max': 3504}, 'cpu_freq_per_core': [{'current': 3504, 'min': 600, 'max': 3504}], 'disk': {'/': {'total': 228.27386474609375, 'used': 13.369155883789062}}, 'gpuapple': {'type': 'arm', 'vendor': 'Apple'}, 'memory': {'total': 8.0}}
+2024-04-06 01:51:09,933 INFO    HandlerThread:81404 [system_monitor.py:probe():224] Finished collecting system info
+2024-04-06 01:51:09,933 INFO    HandlerThread:81404 [system_monitor.py:probe():227] Publishing system info
+2024-04-06 01:51:09,933 DEBUG   HandlerThread:81404 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-04-06 01:51:10,726 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/conda-environment.yaml
+2024-04-06 01:51:12,736 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/conda-environment.yaml
+2024-04-06 01:51:12,758 DEBUG   HandlerThread:81404 [system_info.py:_save_conda():219] Saving conda packages done
+2024-04-06 01:51:12,759 INFO    HandlerThread:81404 [system_monitor.py:probe():229] Finished publishing system info
+2024-04-06 01:51:12,759 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:51:12,759 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-04-06 01:51:12,851 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: python_packages
+2024-04-06 01:51:12,851 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: python_packages
+2024-04-06 01:51:12,851 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:51:12,851 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:51:12,852 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:51:13,325 DEBUG   SenderThread:81404 [sender.py:send():378] send: telemetry
+2024-04-06 01:51:13,326 DEBUG   SenderThread:81404 [sender.py:send():378] send: telemetry
+2024-04-06 01:51:13,326 DEBUG   SenderThread:81404 [sender.py:send():378] send: run
+2024-04-06 01:51:13,644 INFO    SenderThread:81404 [sender.py:send_run():973] updated run: ykk4s182
+2024-04-06 01:51:13,737 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml
+2024-04-06 01:51:13,737 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-metadata.json
+2024-04-06 01:51:13,737 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:51:13,738 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/requirements.txt
+2024-04-06 01:51:13,820 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/osxz0y3i-wandb-metadata.json
+2024-04-06 01:51:14,652 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:15,747 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:51:19,672 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:24,695 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:27,856 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:51:27,857 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:51:27,857 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:51:30,237 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:35,250 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:40,271 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:40,859 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml
+2024-04-06 01:51:42,862 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:51:42,862 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:51:42,862 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:51:46,250 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:51,266 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:56,286 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:51:57,866 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:51:57,866 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:51:57,866 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:52:02,259 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:07,282 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:09,918 DEBUG   SystemMonitor:81404 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-04-06 01:52:09,919 DEBUG   SenderThread:81404 [sender.py:send():378] send: telemetry
+2024-04-06 01:52:09,919 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:52:12,866 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:52:12,871 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:52:12,872 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:52:13,284 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:14,009 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml
+2024-04-06 01:52:18,639 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:23,662 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:27,872 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:52:27,877 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:52:27,877 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:52:29,194 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:34,214 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:39,233 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:39,925 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:52:42,877 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:52:42,882 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:52:42,882 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:52:44,248 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:49,269 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:54,287 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:52:57,878 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:52:57,885 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:52:57,885 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:53:00,255 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:05,273 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:09,931 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:53:10,937 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:12,883 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:53:12,889 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:53:12,890 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:53:16,220 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:21,242 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:26,263 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:27,888 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:53:27,894 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:53:27,894 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:53:31,285 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:36,304 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:39,936 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:53:41,946 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:42,891 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:53:42,898 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:53:42,898 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:53:47,322 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:52,339 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:57,358 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:53:57,894 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:53:57,900 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:53:57,900 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:54:03,255 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:08,274 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:09,941 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:54:12,899 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:54:12,905 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:54:12,906 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:54:14,265 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:19,283 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:24,303 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:27,905 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:54:27,906 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:54:27,906 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:54:30,302 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:35,315 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:39,614 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:54:39,615 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:54:39,615 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:54:39,616 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:54:39,653 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:54:39,946 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:54:40,649 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:54:40,951 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:42,910 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:54:42,910 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:54:42,911 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:54:46,309 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:51,332 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:56,353 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:54:57,915 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:54:57,915 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:54:57,915 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:54:58,644 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:54:58,646 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:54:58,646 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:54:58,646 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:54:58,730 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:00,738 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:01,660 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:06,683 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:09,951 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:55:11,960 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:12,919 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:55:12,919 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:55:12,919 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:55:17,266 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:19,057 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:19,057 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png with policy now
+2024-04-06 01:55:19,057 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:19,058 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:19,058 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:19,059 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:19,301 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:19,301 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:19,302 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png with policy now
+2024-04-06 01:55:19,302 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:19,303 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:19,303 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:19,330 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:19,330 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:19,330 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png with policy now
+2024-04-06 01:55:19,330 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:19,330 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:19,331 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:19,820 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media
+2024-04-06 01:55:20,595 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/zacdnx3h-media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png
+2024-04-06 01:55:20,602 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/0pe3naf5-media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png
+2024-04-06 01:55:20,797 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/p4esz8qt-media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png
+2024-04-06 01:55:20,822 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:21,217 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:21,217 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:21,217 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png with policy now
+2024-04-06 01:55:21,217 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:21,217 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:21,218 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:21,244 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:21,245 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:21,245 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Animalia_6_198674c4cd423047c213.png with policy now
+2024-04-06 01:55:21,245 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:21,245 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:21,245 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:21,268 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:21,268 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Animalia_7_d628e60f009832fd44bc.png with policy now
+2024-04-06 01:55:21,268 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:21,268 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:21,268 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:21,268 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:21,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:21,851 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:21,851 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_7_d628e60f009832fd44bc.png
+2024-04-06 01:55:21,851 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_6_198674c4cd423047c213.png
+2024-04-06 01:55:21,852 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png
+2024-04-06 01:55:21,852 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:21,971 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/sm4u34x0-media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png
+2024-04-06 01:55:22,092 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/8id0wh6l-media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png
+2024-04-06 01:55:22,274 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:22,757 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/unc17ufk-media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png
+2024-04-06 01:55:22,783 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/uofb37o8-media/images/Image: Animalia_7_d628e60f009832fd44bc.png
+2024-04-06 01:55:22,982 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/wmxsl0ur-media/images/Image: Animalia_6_198674c4cd423047c213.png
+2024-04-06 01:55:23,239 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:23,240 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Arachnida_8_3acf55724258c4a96612.png with policy now
+2024-04-06 01:55:23,240 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:23,240 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:23,240 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:23,241 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:23,266 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:23,266 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Arachnida_9_564c258229a18a073163.png with policy now
+2024-04-06 01:55:23,266 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:23,267 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:23,267 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:23,267 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:23,288 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:23,288 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:23,288 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png with policy now
+2024-04-06 01:55:23,288 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:23,289 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:23,289 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:23,362 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/x1l0a6sf-media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_9_564c258229a18a073163.png
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_8_3acf55724258c4a96612.png
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png
+2024-04-06 01:55:23,847 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:24,013 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/4qyqf2c0-media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png
+2024-04-06 01:55:24,423 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/twf3k9ez-media/images/Image: Animalia_7_d628e60f009832fd44bc.png
+2024-04-06 01:55:24,486 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/3r94iyo9-media/images/Image: Arachnida_8_3acf55724258c4a96612.png
+2024-04-06 01:55:24,657 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/vjd5z323-media/images/Image: Arachnida_9_564c258229a18a073163.png
+2024-04-06 01:55:24,707 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/4oduvxgr-media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png
+2024-04-06 01:55:25,016 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/ypcdjunq-media/images/Image: Animalia_6_198674c4cd423047c213.png
+2024-04-06 01:55:25,153 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:25,153 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Aves_11_e34a6770dec2374fa9cf.png with policy now
+2024-04-06 01:55:25,153 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:25,154 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:25,154 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:25,154 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:25,176 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:25,176 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png with policy now
+2024-04-06 01:55:25,176 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:25,176 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:25,176 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:25,177 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:25,202 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:25,202 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Aves_13_148d06042081b5a36824.png with policy now
+2024-04-06 01:55:25,202 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:25,202 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:25,202 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:25,203 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:25,857 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:25,857 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:25,857 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_13_148d06042081b5a36824.png
+2024-04-06 01:55:25,857 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_11_e34a6770dec2374fa9cf.png
+2024-04-06 01:55:25,857 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png
+2024-04-06 01:55:25,858 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:26,084 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/72w6kxnm-media/images/Image: Arachnida_9_564c258229a18a073163.png
+2024-04-06 01:55:26,172 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/8y0y9zla-media/images/Image: Arachnida_8_3acf55724258c4a96612.png
+2024-04-06 01:55:26,444 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/ymm7h4ei-media/images/Image: Aves_11_e34a6770dec2374fa9cf.png
+2024-04-06 01:55:26,572 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/xgxi4ysb-media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png
+2024-04-06 01:55:26,616 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/iudoeh0k-media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png
+2024-04-06 01:55:26,809 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/6qec3bhn-media/images/Image: Aves_13_148d06042081b5a36824.png
+2024-04-06 01:55:27,161 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:27,161 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png with policy now
+2024-04-06 01:55:27,162 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:27,162 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:27,163 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:27,163 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:27,199 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:27,199 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png with policy now
+2024-04-06 01:55:27,199 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:27,199 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:27,200 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:27,200 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:27,229 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:27,229 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:27,229 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Fungi_16_a3320cc9aec07f07668d.png with policy now
+2024-04-06 01:55:27,230 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:27,230 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:27,230 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:27,866 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:27,866 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:27,866 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png
+2024-04-06 01:55:27,867 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_16_a3320cc9aec07f07668d.png
+2024-04-06 01:55:27,867 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png
+2024-04-06 01:55:27,867 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:27,921 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: stop_status
+2024-04-06 01:55:27,921 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: stop_status
+2024-04-06 01:55:27,923 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:55:28,053 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/mlgml1e7-media/images/Image: Aves_11_e34a6770dec2374fa9cf.png
+2024-04-06 01:55:28,257 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:28,332 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/w41ye82e-media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png
+2024-04-06 01:55:28,382 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/70znugz9-media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png
+2024-04-06 01:55:28,576 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/0vs3qt10-media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png
+2024-04-06 01:55:28,763 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/05g9cy6m-media/images/Image: Fungi_16_a3320cc9aec07f07668d.png
+2024-04-06 01:55:29,221 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:29,221 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png with policy now
+2024-04-06 01:55:29,221 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:29,222 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:29,222 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:29,222 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:29,241 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:29,242 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png with policy now
+2024-04-06 01:55:29,242 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:29,242 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:29,242 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:29,242 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:29,264 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:29,264 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:29,264 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Insecta_19_653201702b37d944df31.png with policy now
+2024-04-06 01:55:29,264 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:29,264 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:29,264 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:29,479 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/pk6f3uq9-media/images/Image: Aves_13_148d06042081b5a36824.png
+2024-04-06 01:55:29,860 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/z6ldbkgs-media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png
+2024-04-06 01:55:29,873 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:29,873 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:29,873 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_19_653201702b37d944df31.png
+2024-04-06 01:55:29,874 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png
+2024-04-06 01:55:29,874 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png
+2024-04-06 01:55:29,874 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:30,192 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/c3jcuzgs-media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png
+2024-04-06 01:55:30,596 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/73420gzk-media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png
+2024-04-06 01:55:30,743 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/9vc19g7u-media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png
+2024-04-06 01:55:31,022 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:31,022 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:31,022 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mammalia_20_c956e048067496d33c02.png with policy now
+2024-04-06 01:55:31,022 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:31,022 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:31,023 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:31,051 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:31,051 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:31,051 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mammalia_21_daa03681c173a862278c.png with policy now
+2024-04-06 01:55:31,051 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:31,051 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:31,052 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:31,072 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:31,072 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:31,072 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mammalia_22_618f86ed92e89e61576a.png with policy now
+2024-04-06 01:55:31,072 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:31,072 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:31,073 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:31,215 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/a87e0r3q-media/images/Image: Insecta_19_653201702b37d944df31.png
+2024-04-06 01:55:31,317 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/7wgono9x-media/images/Image: Fungi_16_a3320cc9aec07f07668d.png
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_20_c956e048067496d33c02.png
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_22_618f86ed92e89e61576a.png
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_21_daa03681c173a862278c.png
+2024-04-06 01:55:31,883 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:32,115 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/dcxoo9mj-media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png
+2024-04-06 01:55:32,212 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/jq6ntb6o-media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png
+2024-04-06 01:55:32,314 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/37xn8qha-media/images/Image: Mammalia_20_c956e048067496d33c02.png
+2024-04-06 01:55:32,513 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/ojpa09u6-media/images/Image: Mammalia_21_daa03681c173a862278c.png
+2024-04-06 01:55:32,587 INFO    wandb-upload_6:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/0lgcyw45-media/images/Image: Mammalia_22_618f86ed92e89e61576a.png
+2024-04-06 01:55:32,917 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/66yptvk8-media/images/Image: Insecta_19_653201702b37d944df31.png
+2024-04-06 01:55:33,043 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:33,044 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:33,044 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png with policy now
+2024-04-06 01:55:33,044 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:33,044 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:33,044 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:33,080 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:33,080 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png with policy now
+2024-04-06 01:55:33,081 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:33,081 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:33,081 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:33,081 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:33,102 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:33,102 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Mollusca_25_875af57b26efb5956785.png with policy now
+2024-04-06 01:55:33,102 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:33,102 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:33,102 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:33,103 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:33,883 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/6q0l7qal-media/images/Image: Mammalia_20_c956e048067496d33c02.png
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_25_875af57b26efb5956785.png
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png
+2024-04-06 01:55:33,889 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:34,107 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:34,108 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/clne2594-media/images/Image: Mammalia_22_618f86ed92e89e61576a.png
+2024-04-06 01:55:34,213 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/jl2feu0w-media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png
+2024-04-06 01:55:34,624 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/qn3tx3vu-media/images/Image: Mammalia_21_daa03681c173a862278c.png
+2024-04-06 01:55:34,624 INFO    wandb-upload_6:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/oi2vfe22-media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png
+2024-04-06 01:55:34,697 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/luocpx46-media/images/Image: Mollusca_25_875af57b26efb5956785.png
+2024-04-06 01:55:35,546 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:35,547 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Plantae_26_779124a956af64f9372e.png with policy now
+2024-04-06 01:55:35,547 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:35,547 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:35,547 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:35,548 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:35,571 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:35,571 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png with policy now
+2024-04-06 01:55:35,571 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:35,572 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:35,572 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:35,572 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:35,598 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:35,598 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png with policy now
+2024-04-06 01:55:35,598 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:35,598 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:35,598 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:35,598 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:35,842 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/2cy37u06-media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_26_779124a956af64f9372e.png
+2024-04-06 01:55:35,900 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:36,120 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/h70l6gmw-media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png
+2024-04-06 01:55:36,272 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/cwrxixhq-media/images/Image: Mollusca_25_875af57b26efb5956785.png
+2024-04-06 01:55:36,952 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/w9u5swtx-media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png
+2024-04-06 01:55:36,953 INFO    wandb-upload_6:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/l5wtl8lh-media/images/Image: Plantae_26_779124a956af64f9372e.png
+2024-04-06 01:55:37,142 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/v2dfoyh6-media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png
+2024-04-06 01:55:37,791 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:37,791 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:37,791 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Reptilia_29_b49508608c25df7e770d.png with policy now
+2024-04-06 01:55:37,792 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:37,792 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:37,793 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:37,828 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:37,828 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:37,828 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Reptilia_30_33f7227b434119f43dfb.png with policy now
+2024-04-06 01:55:37,829 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:37,829 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:37,830 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:37,863 DEBUG   SenderThread:81404 [sender.py:send():378] send: files
+2024-04-06 01:55:37,863 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: partial_history
+2024-04-06 01:55:37,863 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file media/images/Image: Reptilia_31_803aaa9b89903127e585.png with policy now
+2024-04-06 01:55:37,864 DEBUG   SenderThread:81404 [sender.py:send():378] send: history
+2024-04-06 01:55:37,864 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: summary_record
+2024-04-06 01:55:37,864 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:37,929 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:37,930 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:37,933 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_30_33f7227b434119f43dfb.png
+2024-04-06 01:55:37,934 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_31_803aaa9b89903127e585.png
+2024-04-06 01:55:37,945 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_created():271] file/dir created: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_29_b49508608c25df7e770d.png
+2024-04-06 01:55:37,952 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images
+2024-04-06 01:55:38,400 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/kewo6yvx-media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png
+2024-04-06 01:55:38,594 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/xro1lft0-media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png
+2024-04-06 01:55:39,209 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/n498oy7f-media/images/Image: Reptilia_29_b49508608c25df7e770d.png
+2024-04-06 01:55:39,267 DEBUG   SenderThread:81404 [sender.py:send():378] send: telemetry
+2024-04-06 01:55:39,267 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:39,269 DEBUG   SenderThread:81404 [sender.py:send():378] send: exit
+2024-04-06 01:55:39,269 INFO    SenderThread:81404 [sender.py:send_exit():585] handling exit code: 0
+2024-04-06 01:55:39,269 INFO    SenderThread:81404 [sender.py:send_exit():587] handling runtime: 269
+2024-04-06 01:55:39,269 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:39,269 INFO    SenderThread:81404 [sender.py:send_exit():593] send defer
+2024-04-06 01:55:39,269 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,270 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 0
+2024-04-06 01:55:39,270 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,270 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-04-06 01:55:39,270 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 1
+2024-04-06 01:55:39,270 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,270 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 1
+2024-04-06 01:55:39,270 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,270 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-04-06 01:55:39,270 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 2
+2024-04-06 01:55:39,270 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,271 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 2
+2024-04-06 01:55:39,271 INFO    HandlerThread:81404 [system_monitor.py:finish():203] Stopping system monitor
+2024-04-06 01:55:39,271 DEBUG   SystemMonitor:81404 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-04-06 01:55:39,271 DEBUG   SystemMonitor:81404 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-04-06 01:55:39,271 INFO    HandlerThread:81404 [interfaces.py:finish():202] Joined cpu monitor
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [interfaces.py:finish():202] Joined disk monitor
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [interfaces.py:finish():202] Joined gpuapple monitor
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [interfaces.py:finish():202] Joined memory monitor
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [interfaces.py:finish():202] Joined network monitor
+2024-04-06 01:55:39,272 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 3
+2024-04-06 01:55:39,272 DEBUG   SenderThread:81404 [sender.py:send():378] send: stats
+2024-04-06 01:55:39,272 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 3
+2024-04-06 01:55:39,272 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 4
+2024-04-06 01:55:39,272 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 4
+2024-04-06 01:55:39,272 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-04-06 01:55:39,272 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 5
+2024-04-06 01:55:39,272 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,272 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 5
+2024-04-06 01:55:39,273 DEBUG   SenderThread:81404 [sender.py:send():378] send: summary
+2024-04-06 01:55:39,273 INFO    SenderThread:81404 [sender.py:_save_file():1365] saving file wandb-summary.json with policy end
+2024-04-06 01:55:39,273 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,273 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-04-06 01:55:39,273 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 6
+2024-04-06 01:55:39,273 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,273 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 6
+2024-04-06 01:55:39,273 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,274 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-04-06 01:55:39,275 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:39,284 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/ckd3dn21-media/images/Image: Reptilia_30_33f7227b434119f43dfb.png
+2024-04-06 01:55:39,294 INFO    wandb-upload_3:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/b3t8nrop-media/images/Image: Reptilia_31_803aaa9b89903127e585.png
+2024-04-06 01:55:39,584 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 7
+2024-04-06 01:55:39,584 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:39,585 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 7
+2024-04-06 01:55:39,585 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:39,585 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-04-06 01:55:39,904 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/htzulfgi-media/images/Image: Plantae_26_779124a956af64f9372e.png
+2024-04-06 01:55:39,928 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:39,929 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:39,929 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml
+2024-04-06 01:55:40,275 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-06 01:55:40,798 INFO    wandb-upload_0:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/giuz4hb2-media/images/Image: Reptilia_29_b49508608c25df7e770d.png
+2024-04-06 01:55:40,850 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/vh9fada0-media/images/Image: Reptilia_30_33f7227b434119f43dfb.png
+2024-04-06 01:55:41,091 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 8
+2024-04-06 01:55:41,092 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: poll_exit
+2024-04-06 01:55:41,092 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:41,093 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 8
+2024-04-06 01:55:41,093 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:41,093 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-04-06 01:55:41,094 INFO    SenderThread:81404 [job_builder.py:build():298] Attempting to build job artifact
+2024-04-06 01:55:41,095 INFO    SenderThread:81404 [job_builder.py:_get_source_type():428] is repo sourced job
+2024-04-06 01:55:41,096 INFO    SenderThread:81404 [job_builder.py:_get_program_relpath():446] run is notebook based run
+2024-04-06 01:55:41,099 INFO    SenderThread:81404 [job_builder.py:build():404] adding wandb-job metadata file
+2024-04-06 01:55:41,104 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 9
+2024-04-06 01:55:41,104 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:41,104 DEBUG   SenderThread:81404 [sender.py:send():378] send: artifact
+2024-04-06 01:55:41,105 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 9
+2024-04-06 01:55:41,276 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-06 01:55:41,325 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/tmpkwgbs0twwandb/9meuhw64-media/images/Image: Reptilia_31_803aaa9b89903127e585.png
+2024-04-06 01:55:41,941 INFO    Thread-76 :81404 [dir_watcher.py:_on_file_modified():288] file/dir modified: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:43,124 INFO    wandb-upload_3:81404 [upload_job.py:push():86] Skipped uploading /Users/gaurav/Library/Application Support/wandb/artifacts/staging/tmpki_15a_0
+2024-04-06 01:55:43,588 INFO    wandb-upload_2:81404 [upload_job.py:push():89] Uploaded file /Users/gaurav/Library/Application Support/wandb/artifacts/staging/tmp7gux8hl_
+2024-04-06 01:55:45,617 INFO    SenderThread:81404 [sender.py:send_artifact():1443] sent artifact job-git_github.com_GauravKanwat_DL-CS6910-Assignment-2.git_CNN_no_sweep.ipynb - {'id': 'QXJ0aWZhY3Q6Nzg0NzE2MjM3', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE1NzQwMDQ4Ng==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Nzg0NzA5MDM0', 'versionIndex': 0}}}
+2024-04-06 01:55:45,618 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:45,618 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-04-06 01:55:45,618 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: status_report
+2024-04-06 01:55:45,618 INFO    SenderThread:81404 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-04-06 01:55:45,955 INFO    SenderThread:81404 [dir_watcher.py:finish():388] scan: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files
+2024-04-06 01:55:45,956 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/requirements.txt requirements.txt
+2024-04-06 01:55:45,956 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log output.log
+2024-04-06 01:55:45,960 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml config.yaml
+2024-04-06 01:55:45,963 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json wandb-summary.json
+2024-04-06 01:55:45,964 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/conda-environment.yaml conda-environment.yaml
+2024-04-06 01:55:45,969 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-metadata.json wandb-metadata.json
+2024-04-06 01:55:45,972 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png media/images/Image: Fungi_14_b7aa92f88a1f90f989f3.png
+2024-04-06 01:55:45,972 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_25_875af57b26efb5956785.png media/images/Image: Mollusca_25_875af57b26efb5956785.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png media/images/Image: Arachnida_10_4ae801a8d88346e00d99.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png media/images/Image: Plantae_27_90a188d6ac3fd546cac5.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_11_e34a6770dec2374fa9cf.png media/images/Image: Aves_11_e34a6770dec2374fa9cf.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png media/images/Image: Mollusca_24_067f1e166b0f8a47a388.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_22_618f86ed92e89e61576a.png media/images/Image: Mammalia_22_618f86ed92e89e61576a.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_9_564c258229a18a073163.png media/images/Image: Arachnida_9_564c258229a18a073163.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_20_c956e048067496d33c02.png media/images/Image: Mammalia_20_c956e048067496d33c02.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png media/images/Image: Mollusca_23_c8feef9c131f13fbe3c7.png
+2024-04-06 01:55:45,973 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Mammalia_21_daa03681c173a862278c.png media/images/Image: Mammalia_21_daa03681c173a862278c.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png media/images/Image: Amphibia_4_34c9fbe46172c3801cd5.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Arachnida_8_3acf55724258c4a96612.png media/images/Image: Arachnida_8_3acf55724258c4a96612.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png media/images/Image: Insecta_17_7c7d7401e803cbb725ec.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png media/images/Image: Amphibia_2_1f76d805ed9ad5846a05.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png media/images/Image: Fungi_15_16efa2ef93019ebb9e28.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_19_653201702b37d944df31.png media/images/Image: Insecta_19_653201702b37d944df31.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png media/images/Image: Animalia_5_ac14bca3eb8b3fbcd280.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png media/images/Image: Insecta_18_cf7ec7b3fb738f10cc98.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_31_803aaa9b89903127e585.png media/images/Image: Reptilia_31_803aaa9b89903127e585.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png media/images/Image: Aves_12_7876ab9cd6cbe1b205da.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_30_33f7227b434119f43dfb.png media/images/Image: Reptilia_30_33f7227b434119f43dfb.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png media/images/Image: Amphibia_3_901508f5f2e8cab4009e.png
+2024-04-06 01:55:45,974 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Reptilia_29_b49508608c25df7e770d.png media/images/Image: Reptilia_29_b49508608c25df7e770d.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_26_779124a956af64f9372e.png media/images/Image: Plantae_26_779124a956af64f9372e.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png media/images/Image: Plantae_28_4c55c8f3ab56ffd8d643.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_6_198674c4cd423047c213.png media/images/Image: Animalia_6_198674c4cd423047c213.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Animalia_7_d628e60f009832fd44bc.png media/images/Image: Animalia_7_d628e60f009832fd44bc.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Fungi_16_a3320cc9aec07f07668d.png media/images/Image: Fungi_16_a3320cc9aec07f07668d.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [dir_watcher.py:finish():402] scan save: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/media/images/Image: Aves_13_148d06042081b5a36824.png media/images/Image: Aves_13_148d06042081b5a36824.png
+2024-04-06 01:55:45,975 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 10
+2024-04-06 01:55:45,975 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: poll_exit
+2024-04-06 01:55:45,975 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:45,976 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 10
+2024-04-06 01:55:45,976 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:45,976 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-04-06 01:55:45,976 INFO    SenderThread:81404 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-06 01:55:46,296 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: keepalive
+2024-04-06 01:55:46,296 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-06 01:55:46,297 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: poll_exit
+2024-04-06 01:55:46,781 INFO    wandb-upload_5:81404 [upload_job.py:push():131] Uploaded file /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/config.yaml
+2024-04-06 01:55:46,782 INFO    wandb-upload_6:81404 [upload_job.py:push():131] Uploaded file /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/requirements.txt
+2024-04-06 01:55:46,783 INFO    wandb-upload_4:81404 [upload_job.py:push():131] Uploaded file /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/output.log
+2024-04-06 01:55:46,783 INFO    wandb-upload_2:81404 [upload_job.py:push():131] Uploaded file /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/wandb-summary.json
+2024-04-06 01:55:46,783 INFO    wandb-upload_1:81404 [upload_job.py:push():131] Uploaded file /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/files/conda-environment.yaml
+2024-04-06 01:55:46,989 INFO    Thread-75 (_thread_body):81404 [sender.py:transition_state():613] send defer: 11
+2024-04-06 01:55:46,990 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:46,990 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 11
+2024-04-06 01:55:46,991 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:46,991 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-04-06 01:55:46,992 INFO    SenderThread:81404 [file_pusher.py:join():178] waiting for file pusher
+2024-04-06 01:55:47,012 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 12
+2024-04-06 01:55:47,012 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:47,012 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 12
+2024-04-06 01:55:47,013 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:47,013 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-04-06 01:55:47,013 INFO    SenderThread:81404 [file_stream.py:finish():595] file stream finish called
+2024-04-06 01:55:47,299 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-06 01:55:47,328 INFO    SenderThread:81404 [file_stream.py:finish():599] file stream finish is done
+2024-04-06 01:55:47,329 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 13
+2024-04-06 01:55:47,329 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: poll_exit
+2024-04-06 01:55:47,329 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:47,330 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 13
+2024-04-06 01:55:47,331 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:47,331 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-04-06 01:55:47,331 INFO    SenderThread:81404 [sender.py:transition_state():613] send defer: 14
+2024-04-06 01:55:47,332 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: defer
+2024-04-06 01:55:47,332 INFO    HandlerThread:81404 [handler.py:handle_request_defer():172] handle defer: 14
+2024-04-06 01:55:47,332 DEBUG   SenderThread:81404 [sender.py:send():378] send: final
+2024-04-06 01:55:47,332 DEBUG   SenderThread:81404 [sender.py:send():378] send: footer
+2024-04-06 01:55:47,332 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: defer
+2024-04-06 01:55:47,332 INFO    SenderThread:81404 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-04-06 01:55:47,333 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: poll_exit
+2024-04-06 01:55:47,334 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: poll_exit
+2024-04-06 01:55:47,336 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: internal_messages
+2024-04-06 01:55:47,337 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: server_info
+2024-04-06 01:55:47,338 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: get_summary
+2024-04-06 01:55:47,338 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: server_info
+2024-04-06 01:55:47,338 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: sampled_history
+2024-04-06 01:55:47,341 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: job_info
+2024-04-06 01:55:47,835 DEBUG   SenderThread:81404 [sender.py:send_request():405] send_request: job_info
+2024-04-06 01:55:47,837 DEBUG   HandlerThread:81404 [handler.py:handle_request():146] handle_request: shutdown
+2024-04-06 01:55:47,838 INFO    HandlerThread:81404 [handler.py:finish():869] shutting down handler
+2024-04-06 01:55:48,342 INFO    WriterThread:81404 [datastore.py:close():296] close: /Users/gaurav/Developer/Projects/CS6910_2/Part_A/wandb/run-20240406_015108-ykk4s182/run-ykk4s182.wandb
+2024-04-06 01:55:48,836 INFO    SenderThread:81404 [sender.py:finish():1521] shutting down sender
+2024-04-06 01:55:48,836 INFO    SenderThread:81404 [file_pusher.py:finish():172] shutting down file pusher
+2024-04-06 01:55:48,837 INFO    SenderThread:81404 [file_pusher.py:join():178] waiting for file pusher
