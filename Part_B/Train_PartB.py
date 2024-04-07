@@ -154,7 +154,7 @@ def main():
     k = 12                      # Number of layers to freeze
 
     def train():   
-        with wandb.init(project="Testing") as run:
+        with wandb.init(project="CS6910_Assignment_2_Part_B") as run:
             config = wandb.config
             run_name = "aug_" + str(data_augmentation) + "_bs_" + str(batch_size) + "_fine_tune_" + str(fine_tuning_method) + "_num_freeze_layer_all"
             if fine_tuning_method != 1:
