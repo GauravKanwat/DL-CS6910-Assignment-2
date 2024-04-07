@@ -2,7 +2,7 @@ import argparse
 
 def configParse():
     parser = argparse.ArgumentParser(description='Train CNN with specified parameters.')
-    parser.add_argument('-wp','--wandb_project', type = str, default = 'Testing', help = 'project name')
+    parser.add_argument('-wp','--wandb_project', type = str, default = 'CS6910_Assignment_2', help = 'project name')
     parser.add_argument('-we', '--wandb_entity', type = str, default='Entity', help = 'wandb entity')
     parser.add_argument('-da', '--data_augmentation', type = str, default='Yes', help = 'data augmentation')
     parser.add_argument('-bs', '--batch_size', type = int, default = 32, help='batch size')
