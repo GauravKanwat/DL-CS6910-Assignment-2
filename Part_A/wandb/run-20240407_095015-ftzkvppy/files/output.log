@@ -1,6 +1,0 @@
-[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'data_augmentation' was locked by 'sweep' (ignored update).
-[34m[1mwandb[39m[22m: [33mWARNING[39m Config item 'batch_norm' was locked by 'sweep' (ignored update).
-  0%|                                           | 0/10 [00:00<?, ?it/s]
-  0%|                                          | 0/563 [00:00<?, ?it/s]
-Device:  mps
-filter size:  [5, 5, 5, 5, 5]
