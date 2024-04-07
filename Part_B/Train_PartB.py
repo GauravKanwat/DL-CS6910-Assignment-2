@@ -4,7 +4,7 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import torch.utils.data as data_utils
-from torchvision import datasets, transforms
+from torchvision import models, datasets, transforms
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,9 +14,9 @@ import wandb
 wandb.login()
 
 import sys
-sys.path.append('CNN')
+sys.path.append('../Part_A/CNN')
 
-from ClassCNN import ClassCNN, trainCNN
+from ClassCNN import trainCNN
 
 def show_images(class_names, images, labels):
     plt.figure(figsize=(10, 10))
@@ -30,33 +30,6 @@ def show_images(class_names, images, labels):
     plt.subplots_adjust(wspace=0.4, hspace=0.5)
     plt.show()
 
-def show_images_and_labels(device, model, test_loader, class_names):
-    model.eval()
-    with torch.no_grad():  # Disable gradient tracking
-        images_per_class = {class_name: 0 for class_name in class_names}
-        fig, axes = plt.subplots(10, 3, figsize=(15, 30))  # 10x3 grid
-        
-        for images, labels in test_loader:
-            images, labels = images.to(device), labels.to(device)
-            outputs = model(images)
-            _, predicted = torch.max(outputs, 1)
-            
-            for image, label, pred in zip(images, labels, predicted):
-                class_name = class_names[label.item()]
-                if images_per_class[class_name] < 3:
-                    ax = axes[label.item(), images_per_class[class_name]]
-                    img = image.permute(1, 2, 0).cpu().numpy()
-                    ax.imshow(img)
-                    ax.set_title(f"Predicted: {class_names[pred.item()]}\nOriginal: {class_name}")
-                    ax.axis('off')
-                    images_per_class[class_name] += 1
-            
-            if all(count == 3 for count in images_per_class.values()):
-                break
-                
-        # Prevent overlap
-        plt.tight_layout()
-        plt.show()
 
 
 def data_generation(dataset_path, num_classes=10, data_augmentation=False, batch_size=32):
@@ -135,87 +108,117 @@ def data_generation(dataset_path, num_classes=10, data_augmentation=False, batch
     return train_loader, val_loader, test_loader, class_names
 
 
+
+# ----------Performe fine-tuning on the pre-trained model----------->
+
+
+def feature_extraction(model, device):
+    
+    #Freeze all the layers
+    for params in model.parameters():
+        params.requires_grad = False
+
+def freeze_till_k(model, device, k):
+    # Counter to track the number of frozen layers
+    frozen_layers = 0
+    
+    for param in model.parameters():
+        # Freeze layers up to the k-th layer
+        if frozen_layers < k:
+            param.requires_grad = False
+            frozen_layers += 1
+        else:
+            # Stop freezing layers after k-th layer
+            break
+
+
+def no_freezing(model, device):
+
+    # Unfreeze all the layers
+    for params in model.parameters():
+        params.requires_grad = True
+
+
+#----------------------END------------------------------------------>
+
+
+
+
 def main():    
     dataset_path = '../inaturalist_12K/' 
 
-    sweep_config = {
-        'method' : 'bayes',                    #('random', 'grid', 'bayes')
-        'project' : 'CS6910_Assignment_2',
-        'metric' : {                           # Metric to optimize
-            'name' : 'accuracy', 
-            'goal' : 'maximize'
-        },
-        'parameters' : {
-            'data_augmentation': {
-                'values' : [True, False]
-            },
-            'batch_size': {
-                'values' : [32]
-            },
-            'batch_norm' : {
-                'values' : [True, False]
-            },
-            'dropout' : {
-                'values' : [0.2, 0.3]
-            },
-            'dense_size' : {
-                'values' : [128, 256, 512]
-            },
-            'num_filters' : {
-                'values' : [4, 8, 16, 32]
-            },
-            'filter_size' : {
-                'values' : [3, 5, 7]
-            },
-            'activation_function': {
-                'values' : ['ReLU', 'GELU', 'SiLU', 'Mish']
-            },
-            'filter_multiplier': {
-                'values' : [1, 0.5, 2]
-            }
-        }
-    }
+    data_augmentation = True
+    batch_size = 32
+    num_classes = 10
+    fine_tuning_method = 2      # Fine-tuning method
+    k = 12                      # Number of layers to freeze
 
     def train():   
-        with wandb.init(project="CS6910_Assignment_2") as run:
+        with wandb.init(project="Testing") as run:
             config = wandb.config
-            run_name = "aug_" + str(config.data_augmentation) + "_bs_" + str(config.batch_size) + "_norm_" + str(config.batch_norm) + "_dropout_" + str(config.dropout) + "_fc_" + str(config.dense_size) + "_nfilters_" + str(config.num_filters) +"_ac_" + config.activation_function + "_fmul_" + str(config.filter_multiplier)
-            wandb.run.name = run_name
+            run_name = "aug_" + str(data_augmentation) + "_bs_" + str(batch_size) + "_fine_tune_" + str(fine_tuning_method) + "_num_freeze_layer_all"
+            if fine_tuning_method != 1:
+                run_name = "aug_" + str(data_augmentation) + "_bs_" + str(batch_size) + "_fine_tune_" + str(fine_tuning_method) + "_num_freeze_layer_" + str(k)
+            elif fine_tuning_method == 3:
+                run_name = "aug_" + str(data_augmentation) + "_bs_" + str(batch_size) + "_fine_tune_" + str(fine_tuning_method) + "_num_freeze_layer_none"
 
+            wandb.run.name = run_name
             train_loader, val_loader, test_loader, class_names = data_generation(dataset_path, 
-                                                                                 num_classes=10, 
-                                                                                 data_augmentation=config.data_augmentation, 
-                                                                                 batch_size=config.batch_size)
+                                                                                     num_classes=10, 
+                                                                                     data_augmentation=data_augmentation, 
+                                                                                     batch_size=batch_size)
+            print("Train: ", len(train_loader))
+            print("Val: ", len(val_loader))
+            print("Test: ", len(test_loader))
+
+
+            # -------------- RUN TO VIEW TRAINING IMAGES ------------------
             
             # for images, labels in train_loader:
             #     show_images(class_names, images, labels)
             #     break
+
+            # ------------------------- END -------------------------------
+
             
             filter_sizes = []
             for i in range(5):
                 filter_sizes.append(config.filter_size)
             
+            # Torch function to switch between CPU and GPU
+            
+            # 2. Below code for switching between CPU and cuda
+            # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+            
+            # 1. Below code for switching between CPU and Apple MPS
             device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
             print("Device: ", device)
+
             
-            print("filter size: ", filter_sizes)
-            model = ClassCNN(num_filters=config.num_filters, 
-                                activation_function=config.activation_function, 
-                                filter_multiplier=config.filter_multiplier,
-                                filter_sizes=filter_sizes, 
-                                dropout=config.dropout, 
-                                batch_norm=config.batch_norm,
-                                dense_size=config.dense_size, 
-                                num_classes=10, 
-                                image_size=256)
+            model = models.googlenet(pretrained=True)
             model.to(device)
 
-            trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=10, optimizer="Adam")
+            # Method 1: Feature Extraction
+            if fine_tuning_method == 1:
+                feature_extraction(model, device)
+                model.fc = nn.Linear(model.fc.in_features, num_classes)
+                model.to(device)
+                trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=5, optimizer="Adam")
             
-            show_images_and_labels(device, model, test_loader, class_names)
+            # Method 2: Freeze till k layers
+            elif fine_tuning_method == 2:
+                freeze_till_k(model, device, k)
+                model.fc = nn.Linear(model.fc.in_features, num_classes)
+                model.to(device)
+                trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=5, optimizer="Adam")
+
+            # Method 3: No freezing
+            else:
+                feature_extraction(model, device)
+                model.fc = nn.Linear(model.fc.in_features, num_classes)
+                model.to(device)
+                trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=5, optimizer="Adam")
     
-    sweep_id = wandb.sweep(sweep=sweep_config)
-    wandb.agent(sweep_id, function=train, count=50)
     wandb.finish()
     train()
 

@@ -1,0 +1,27 @@
+Train:  563
+Val:  63
+Test:  63
+Device:  mps
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=GoogLeNet_Weights.IMAGENET1K_V1`. You can also use `weights=GoogLeNet_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_23235/402845313.py", line 44, in train
+    trainCNN(device, train_loader, val_loader, test_loader, model, num_epochs=5, optimizer="Adam")
+  File "/var/folders/3m/7slbgqtx4rlff38t_2cx53700000gp/T/ipykernel_23235/964984367.py", line 20, in trainCNN
+    opt_func.step()  # Update the parameters
+    ^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/Users/gaurav/miniforge3/envs/CS6910_Assignment/lib/python3.12/site-packages/torch/optim/adam.py", line 392, in _single_tensor_adam
+    exp_avg_sq.mul_(beta2).addcmul_(grad, grad.conj(), value=1 - beta2)
+KeyboardInterrupt

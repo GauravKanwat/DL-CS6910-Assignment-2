@@ -1,0 +1,5 @@
+Device:  mps
+filter size:  [5, 5, 5, 5, 5]
+fc1_input:  2048
+  0%|                                           | 0/10 [00:00<?, ?it/s][34m[1mwandb[39m[22m: Ctrl + C detected. Stopping sweep.
+  0%|                                          | 0/563 [00:00<?, ?it/s]
