@@ -1,5 +1,0 @@
-Device:  mps
-filter size:  [3, 3, 3, 3, 3]
-fc1_input:  576
-  0%|                                                                           | 0/10 [00:00<?, ?it/s]
-
