@@ -1,6 +1,8 @@
 torch
 tqdm
+random
 numpy
 torchvision
 matplotlib
 pathlib
+wandb
